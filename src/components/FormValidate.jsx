@@ -75,7 +75,7 @@ const FormValidate = () => {
         setConCol("red")
       }
       else{
-        setContent("Thankyou!!!")
+        setContent("Thank    you!!!")
         setConCol("green")
       }
       
