@@ -5,30 +5,39 @@
 }
 body{
     height: 100vh;
-    background-image: linear-gradient(to right,#fff7c8 0%,#fa709a 100%);
+    background-image: linear-gradient(to right,#45a29e 0%,#1f2833 100%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .card{
-    background: #f3fffe;
+    background: #1f2833b3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr  1fr ;
     width: 50rem;
     height: 30rem;
-    box-shadow: .5px .5px 1px 1px rgb(255, 255, 223);
+    /* box-shadow: .5px .5px 1px 1px rgb(255, 255, 223); */
+    /* border: 1px solid black; */
 }
 .card-img{
-    background: url("https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    /* background: url("https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:cover; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    border-right: 1px solid black;
+    text-align: center;
 }
 form{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 input{
     padding: 10px;
@@ -38,17 +47,25 @@ input{
     border: none;
     border-bottom: 1px solid #ccc;
     outline: none;
+    color: white;
 }
 .error{
     color: red;
 }
 .submit-btn{
-    width: 80%;
+    width: 30%;
     margin-top: 20px;
-    background: rgb(255, 90, 123);
+    /* background: #66fcf1; */
     cursor: pointer;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #66fcf1;
+    border-radius: 1rem;
+}
+.submit-btn:hover{
+    background: #66fcf1;
+    box-shadow: 2px 2px 25px    #66fcf1;
 }

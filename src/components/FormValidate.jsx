@@ -7,6 +7,8 @@ const FormValidate = () => {
     const[email,setEmail]=useState("")
     const[password,setPassword]=useState("")
     const[conPassword,setConPassword]=useState("")
+    const[content,setContent]=useState("welcome")
+    const[conCol,setConCol]=useState("#66fcf1")
 
     const[erroruserName,setErroruserName]=useState("")
     const[errorEmail,setErrorEmail]=useState("")
@@ -28,7 +30,8 @@ const FormValidate = () => {
       }else{
         setErroruserName("Username must contain 8 letters");
         setUserNamecol("red")
-        // setUserName("")
+       
+       
       }
 
       if(email.includes("@gmail")){
@@ -37,6 +40,7 @@ const FormValidate = () => {
       }else{
         setErrorEmail("Email should have @gmail")
         setEmailcol("red")
+        
       }
 
       if(password.length>=8){
@@ -45,6 +49,7 @@ const FormValidate = () => {
       }else{
         setErrorpassword("Password  should be 8 letters long")
         setPasswordcol("red")
+        
       }
 
       if(conPassword!="" && password===conPassword){
@@ -53,15 +58,29 @@ const FormValidate = () => {
       }else{
         setErrorconpassword("Password did not matched")
         setConPasswordcol("red")
+        
       }
 
+      if(userName.length < 8){
+        setContent("Enter Correct Name")
+        setConCol("red")
+      }else if((email.includes("@gmail"))===false){
+        setContent("Enter Correct Email")
+        setConCol("red")
+      }else if(password.length<8){
+        setContent("Enter Correct Password")
+        setConCol("red")
+      }else if(conPassword=="" && password!==conPassword){
+        setContent("Password didn't matched")
+        setConCol("red")
+      }
       
     }
 
 
   return <>
   <div className="card">
-    <div className="card-img"></div>
+    <div className="card-img" style={{color:conCol}} >{content} </div>
 
     <form >
         <input type="text" 
