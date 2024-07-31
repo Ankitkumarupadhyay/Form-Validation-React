@@ -28,7 +28,7 @@ const FormValidate = () => {
         setUserNamecol("green")
         // setUserName("")
       }else{
-        setErroruserName("Username must contain 8 letters");
+        setErroruserName("Username must contain 2 letters");
         setUserNamecol("red")
        
        

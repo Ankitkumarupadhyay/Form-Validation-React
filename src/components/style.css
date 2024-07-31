@@ -44,6 +44,7 @@ input{
     border-bottom: 1px solid #ccc;
     outline: none;
     color: white;
+    font-size: 1rem;
 }
 .error{
     color: red;
