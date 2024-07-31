@@ -23,7 +23,7 @@ const FormValidate = () => {
     const validate =(e)=>{
       e.preventDefault()
       
-      if(userName.length > 8){
+      if(userName.length > 1){
         setErroruserName("");
         setUserNamecol("green")
         // setUserName("")
@@ -61,7 +61,7 @@ const FormValidate = () => {
         
       }
 
-      if(userName.length < 8){
+      if(userName.length < 2){
         setContent("Enter Correct Name")
         setConCol("red")
       }else if((email.includes("@gmail"))===false){
@@ -70,9 +70,13 @@ const FormValidate = () => {
       }else if(password.length<8){
         setContent("Enter Correct Password")
         setConCol("red")
-      }else if(conPassword=="" && password!==conPassword){
+      }else if(password!==conPassword){
         setContent("Password didn't matched")
         setConCol("red")
+      }
+      else{
+        setContent("Thankyou!!!")
+        setConCol("green")
       }
       
     }
